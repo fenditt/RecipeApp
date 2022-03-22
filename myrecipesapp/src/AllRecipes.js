@@ -6,7 +6,7 @@ import { loadData, selectFilteredAllRecipes } from './AllRecipesSlice.js';
 
 const favoriteIconURL = 'https://i.postimg.cc/VL40MTrh/favicon-32x32.png';
 
-export default function FavoriteButton({ children, onClickHandler, icon }) {
+export function FavoriteButton({ children, onClickHandler, icon }) {
     return (
       <button className="favorite-button" onClick={onClickHandler}>
         <img className="heart-icon" alt="" src={icon} />

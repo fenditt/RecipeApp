@@ -9,8 +9,8 @@ export function App() {
       <section>
         <SearchTerm />
       </section>
-      <section>
-        <h2>Yay, your favorite recipes!</h2>
+      <section><br />
+        <h1><center>Yay, your favorite recipes!</center></h1><br />
         <FavoriteRecipes />
       </section>
       <hr />
