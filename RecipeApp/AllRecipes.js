@@ -1,12 +1,34 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addRecipe } from '../favoriteRecipes/favoriteRecipesSlice.js';
-import { loadData, selectFilteredAllRecipes } from './allRecipesSlice.js';
-import FavoriteButton from "../../components/FavoriteButton";
-import Recipe from "../../components/Recipe";
+import { addRecipe } from './favRecipeSlice';
+import { loadData, selectFilteredAllRecipes } from './allRecipesSlice';
 
 
 const favoriteIconURL = 'https://i.postimg.cc/VL40MTrh/favicon-32x32.png';
+
+function FavoriteButton({ children, onClickHandler, icon }) {
+    return (
+      <button className="favorite-button" onClick={onClickHandler}>
+        <img className="heart-icon" alt="" src={icon} />
+        {children}
+      </button>
+    );
+  }
+
+
+  function Recipe({ recipe, children }) {
+    return (
+      <div key={recipe.id} className="recipe" tabIndex={0}>
+        <span className="recipe-container">
+          <h3 className="recipe-name">{recipe.name}</h3>
+          <div className="image-container">
+            <img src={recipe.img} alt="" className="recipe-image" />
+          </div>
+        </span>
+        {children}
+      </div>
+    );
+  }
 
 export const AllRecipes = () => {
   const allRecipes = useSelector(selectFilteredAllRecipes);
