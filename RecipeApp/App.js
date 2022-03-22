@@ -1,7 +1,7 @@
 import React from 'react';
-import { AllRecipes } from './AllRecipes';
-import { SearchTerm } from './SearchEng';
-import { FavoriteRecipes } from './FavRecipe';
+import { AllRecipes } from './AllRecipes.js';
+import { SearchTerm } from './SearchEng.js';
+import { FavoriteRecipes } from './FavRecipe.js';
 
 export function App() {
   return (

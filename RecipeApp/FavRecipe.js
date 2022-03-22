@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeRecipe, selectFilteredFavoriteRecipes } from './favoriteRecipesSlice.js';
-import FavoriteButton from "../../components/FavoriteButton";
-import Recipe from "../../components/Recipe";
-const unfavoriteIconUrl = 'https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/unfavorite.svg';
+import { removeRecipe, selectFilteredFavoriteRecipes } from './favRecipeSlice.js';
+import FavoriteButton from "./AllRecipes.js";
+import Recipe from "./AllRecipes.js";
+const unfavoriteIconUrl = 'https://i.postimg.cc/VL40MTrh/favicon-32x32.png';
 
 export const FavoriteRecipes = () =>{
   const favoriteRecipes = useSelector(selectFilteredFavoriteRecipes);

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addRecipe } from './favRecipeSlice';
-import { loadData, selectFilteredAllRecipes } from './allRecipesSlice';
+import { addRecipe } from './favRecipeSlice.js';
+import { loadData, selectFilteredAllRecipes } from './AllRecipesSlice.js';
 
 
 const favoriteIconURL = 'https://i.postimg.cc/VL40MTrh/favicon-32x32.png';
 
-function FavoriteButton({ children, onClickHandler, icon }) {
+export default function FavoriteButton({ children, onClickHandler, icon }) {
     return (
       <button className="favorite-button" onClick={onClickHandler}>
         <img className="heart-icon" alt="" src={icon} />
@@ -16,7 +16,7 @@ function FavoriteButton({ children, onClickHandler, icon }) {
   }
 
 
-  function Recipe({ recipe, children }) {
+ export default function Recipe({ recipe, children }) {
     return (
       <div key={recipe.id} className="recipe" tabIndex={0}>
         <span className="recipe-container">
